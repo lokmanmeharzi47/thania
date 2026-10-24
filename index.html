@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <title>ثانية حمشاوي | كرت السيرة الذاتية والصفة الرسمية • THANIA HAMCHAOUI</title>
-  <meta name="description" content="البوابة التعريفية الرسمية لـ ثانية حمشاوي - عضو بالمكتب الجهوي (الوسط الجزائر العاصمة) لدى الهيئة الوطنية لتنمية المهاجرين والتكفل بالجالية بالخارج.">
-  <meta name="author" content="THANIA HAMCHAOUI">
+  <title>تانية حمشاوي | كرت السيرة الذاتية والصفة الرسمية • Thania HAMCHAOUI</title>
+  <meta name="description" content="البوابة التعريفية الرسمية لـ تانية حمشاوي - عضو بالمكتب الجهوي (الوسط الجزائر العاصمة) لدى الهيئة الوطنية لتنمية المهاجرين والتكفل بالجالية بالخارج.">
+  <meta name="author" content="Thania HAMCHAOUI">
   
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="ثانية حمشاوي | عضو بالمكتب الجهوي - الهيئة الوطنية لتنمية المهاجرين">
-  <meta property="og:description" content="ثانية حمشاوي - عضو بالمكتب الجهوي (الوسط الجزائر العاصمة) • بطاقة عضوية معتمدة">
+  <meta property="og:title" content="تانية حمشاوي | عضو بالمكتب الجهوي - الهيئة الوطنية لتنمية المهاجرين">
+  <meta property="og:description" content="تانية حمشاوي - عضو بالمكتب الجهوي (الوسط الجزائر العاصمة) • بطاقة عضوية معتمدة">
   <meta property="og:image" content="portrait.jpg">
   
   <!-- Google Fonts -->
@@ -494,6 +494,23 @@
       background: rgba(18, 52, 36, 0.95);
     }
 
+    .btn-whatsapp {
+      background: linear-gradient(135deg, rgba(20, 75, 45, 0.95) 0%, rgba(10, 40, 24, 0.98) 100%);
+      color: #E8F9F0;
+      border: 1px solid rgba(37, 211, 102, 0.55);
+    }
+
+    .btn-whatsapp svg {
+      fill: #25D366;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, rgba(25, 95, 58, 0.98) 0%, rgba(14, 50, 30, 1) 100%);
+      border-color: #25D366;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+    }
+
     /* Official Credential Data Card */
     .credential-card {
       background: var(--surface-card);
@@ -634,37 +651,103 @@
     .contact-pills {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
 
     .contact-pill {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 48px;
-      padding: 10px 18px;
-      border-radius: var(--r-pill);
-      background: rgba(10, 32, 22, 0.85);
+      gap: 14px;
+      min-height: 58px;
+      padding: 12px 18px;
+      border-radius: var(--r-md);
+      background: var(--surface-card);
       border: var(--edge-gold);
       color: var(--text-white);
       text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 600;
-      transition: all 0.25s ease;
+      transition: all 0.25s var(--ease-luxury);
       cursor: pointer;
     }
 
-    .contact-pill svg {
-      width: 18px;
-      height: 18px;
-      fill: var(--gold);
+    .contact-pill-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-bright);
+      transition: all 0.25s ease;
+    }
+
+    .contact-pill-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    .contact-pill-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .contact-label {
+      font-size: 0.74rem;
+      color: var(--gold-muted);
+      font-weight: 600;
+    }
+
+    .contact-value {
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      word-break: break-word;
+    }
+
+    .ltr-text {
+      direction: ltr;
+      unicode-bidi: isolate;
+      font-family: var(--font-latin);
+      letter-spacing: 0.04em;
     }
 
     .contact-pill:hover {
-      background: rgba(212, 175, 55, 0.2);
+      transform: translateY(-2px);
+      background: var(--surface-card-hover);
       border-color: var(--gold-bright);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    }
+
+    .contact-pill:hover .contact-pill-icon {
+      background: rgba(212, 175, 55, 0.25);
       color: var(--gold-bright);
+    }
+
+    .contact-pill-whatsapp {
+      background: linear-gradient(135deg, rgba(10, 48, 30, 0.95) 0%, rgba(5, 24, 15, 0.98) 100%);
+      border: 1px solid rgba(37, 211, 102, 0.45);
+    }
+
+    .contact-pill-whatsapp .contact-pill-icon {
+      background: rgba(37, 211, 102, 0.15);
+      border-color: rgba(37, 211, 102, 0.5);
+      color: #25D366;
+    }
+
+    .contact-pill-whatsapp:hover {
+      border-color: #25D366;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25);
+    }
+
+    .contact-pill-whatsapp:hover .contact-pill-icon {
+      background: rgba(37, 211, 102, 0.3);
+      color: #25D366;
     }
 
     /* Legal Directives */
@@ -854,7 +937,7 @@
         <!-- Master Official Portrait -->
         <img 
           src="portrait.jpg" 
-          alt="السيدة ثانية حمشاوي - عضو بالمكتب الجهوي (الوسط الجزائر العاصمة)" 
+          alt="السيدة تانية حمشاوي - عضو بالمكتب الجهوي (الوسط الجزائر العاصمة)" 
           class="hero-img"
           id="hero-portrait-img"
           onerror="this.src='portrait-thania.jpg'"
@@ -869,8 +952,8 @@
             <span id="txt-badge-status">بطاقة عضوية معتمدة</span>
           </div>
 
-          <h1 class="person-name-ar" id="txt-person-name-ar">ثانية حمشاوي</h1>
-          <div class="person-name-en" id="txt-person-name-en">THANIA HAMCHAOUI</div>
+          <h1 class="person-name-ar" id="txt-person-name-ar">تانية حمشاوي</h1>
+          <div class="person-name-en" id="txt-person-name-en">Thania HAMCHAOUI</div>
           
           <div class="gold-divider"></div>
           
@@ -903,12 +986,20 @@
         <span id="btn-save-contact">حفظ بطاقة الاتصال الرسمية (vCard)</span>
       </button>
 
-      <a href="tel:+213000000000" class="btn-executive btn-emerald-outline" id="btn-top-call">
+      <a href="tel:+213773125907" class="btn-executive btn-emerald-outline" id="btn-top-call">
         <!-- Phone SVG -->
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
         </svg>
-        <span id="btn-top-call-txt">الاتصال المباشر بالمكتب الجهوي</span>
+        <span id="btn-top-call-txt">الاتصال المباشر • +213 773 12 59 07</span>
+      </a>
+
+      <a href="https://wa.me/213773125907" target="_blank" rel="noopener noreferrer" class="btn-executive btn-whatsapp" id="btn-top-whatsapp">
+        <!-- WhatsApp SVG -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.37C9.37 7.37 9.1 7.43 8.88 7.67C8.65 7.91 8.02 8.5 8.02 9.71C8.02 10.92 8.91 12.08 9.03 12.24C9.16 12.4 10.74 14.97 13.25 15.96C15.35 16.79 15.77 16.62 16.22 16.58C16.67 16.54 17.67 15.99 17.88 15.41C18.08 14.82 18.08 14.32 18.02 14.21C17.96 14.11 17.8 14.05 17.56 13.93C17.32 13.81 16.14 13.23 15.92 13.15C15.7 13.07 15.54 13.03 15.38 13.27C15.22 13.51 14.76 14.05 14.62 14.21C14.48 14.37 14.34 14.39 14.1 14.27C13.86 14.15 12.85 13.82 11.65 12.75C10.72 11.92 10.09 10.89 9.97 10.69C9.85 10.49 9.96 10.38 10.08 10.26C10.19 10.15 10.33 9.97 10.45 9.83C10.57 9.69 10.61 9.59 10.69 9.43C10.77 9.27 10.73 9.13 10.67 9.01C10.61 8.89 10.13 7.73 9.93 7.25C9.74 6.78 9.54 6.84 9.38 6.84L8.91 6.84C8.75 6.84 8.51 6.9 8.27 7.14"/>
+        </svg>
+        <span id="btn-top-wa-txt">محادثة واتساب • WhatsApp</span>
       </a>
 
       <button type="button" class="btn-executive btn-emerald-outline" onclick="shareProfile()">
@@ -942,7 +1033,7 @@
 
         <div class="cred-item">
           <dt id="lbl-full-name">الاسم واللقب (Nom & Prénom)</dt>
-          <dd id="val-full-name">ثانية حمشاوي • THANIA HAMCHAOUI</dd>
+          <dd id="val-full-name">تانية حمشاوي • Thania HAMCHAOUI</dd>
         </div>
 
         <div class="cred-item">
@@ -958,6 +1049,21 @@
         <div class="cred-item cred-item-full">
           <dt id="lbl-role">الوظيفة والصفة الرسمية</dt>
           <dd class="gold-highlight" id="val-role">عضو بالمكتب الجهوي (الوسط الجزائر العاصمة)</dd>
+        </div>
+
+        <div class="cred-item">
+          <dt id="lbl-phone-main">الهاتف المهني / واتساب</dt>
+          <dd class="mono-gold ltr-text" id="val-phone-main">+213 773 12 59 07</dd>
+        </div>
+
+        <div class="cred-item">
+          <dt id="lbl-phone-sec">الهاتف الثانوي</dt>
+          <dd class="mono-gold ltr-text" id="val-phone-sec">+213 553 22 54 86</dd>
+        </div>
+
+        <div class="cred-item cred-item-full">
+          <dt id="lbl-cred-email">البريد الإلكتروني</dt>
+          <dd class="mono-gold" id="val-cred-email" style="font-size: 0.88rem;">flowers_tanya@yahoo.fr</dd>
         </div>
 
         <div class="cred-item cred-item-full">
@@ -1026,25 +1132,69 @@
 
     <!-- Direct Contact Options -->
     <section class="contact-pills anim-reveal" aria-label="قنوات التواصل">
-      <a href="tel:+213000000000" class="contact-pill" id="btn-call">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-        </svg>
-        <span id="txt-contact-phone">الاتصال المباشر بالمكتب الجهوي</span>
+      <!-- Phone Professional / Principal -->
+      <a href="tel:+213773125907" class="contact-pill" id="btn-call-pro">
+        <div class="contact-pill-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+        </div>
+        <div class="contact-pill-text">
+          <span class="contact-label" id="lbl-contact-phone-pro">الهاتف المهني والرئيسي</span>
+          <span class="contact-value ltr-text">+213 773 12 59 07</span>
+        </div>
       </a>
 
-      <a href="mailto:contact@hamchaoui-thania.dz" class="contact-pill" id="btn-mail">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-        </svg>
-        <span id="txt-contact-mail">المراسلة الرسمية عبر البريد الإلكتروني</span>
+      <!-- WhatsApp Direct -->
+      <a href="https://wa.me/213773125907" target="_blank" rel="noopener noreferrer" class="contact-pill contact-pill-whatsapp" id="btn-whatsapp">
+        <div class="contact-pill-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.37C9.37 7.37 9.1 7.43 8.88 7.67C8.65 7.91 8.02 8.5 8.02 9.71C8.02 10.92 8.91 12.08 9.03 12.24C9.16 12.4 10.74 14.97 13.25 15.96C15.35 16.79 15.77 16.62 16.22 16.58C16.67 16.54 17.67 15.99 17.88 15.41C18.08 14.82 18.08 14.32 18.02 14.21C17.96 14.11 17.8 14.05 17.56 13.93C17.32 13.81 16.14 13.23 15.92 13.15C15.7 13.07 15.54 13.03 15.38 13.27C15.22 13.51 14.76 14.05 14.62 14.21C14.48 14.37 14.34 14.39 14.1 14.27C13.86 14.15 12.85 13.82 11.65 12.75C10.72 11.92 10.09 10.89 9.97 10.69C9.85 10.49 9.96 10.38 10.08 10.26C10.19 10.15 10.33 9.97 10.45 9.83C10.57 9.69 10.61 9.59 10.69 9.43C10.77 9.27 10.73 9.13 10.67 9.01C10.61 8.89 10.13 7.73 9.93 7.25C9.74 6.78 9.54 6.84 9.38 6.84L8.91 6.84C8.75 6.84 8.51 6.9 8.27 7.14"/>
+          </svg>
+        </div>
+        <div class="contact-pill-text">
+          <span class="contact-label" id="lbl-contact-wa">المراسلة عبر واتساب (WhatsApp)</span>
+          <span class="contact-value ltr-text">+213 773 12 59 07</span>
+        </div>
       </a>
 
+      <!-- Secondary Phone -->
+      <a href="tel:+213553225486" class="contact-pill" id="btn-call-sec">
+        <div class="contact-pill-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+          </svg>
+        </div>
+        <div class="contact-pill-text">
+          <span class="contact-label" id="lbl-contact-phone-sec">الهاتف الثانوي</span>
+          <span class="contact-value ltr-text">+213 553 22 54 86</span>
+        </div>
+      </a>
+
+      <!-- Email Direct -->
+      <a href="mailto:flowers_tanya@yahoo.fr" class="contact-pill" id="btn-mail">
+        <div class="contact-pill-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </div>
+        <div class="contact-pill-text">
+          <span class="contact-label" id="lbl-contact-mail">البريد الإلكتروني المباشر</span>
+          <span class="contact-value mono-gold" style="font-size: 0.88rem;">flowers_tanya@yahoo.fr</span>
+        </div>
+      </a>
+
+      <!-- Office Location -->
       <div class="contact-pill" onclick="copyOfficeLocation()" role="button" tabindex="0">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-        </svg>
-        <span id="txt-contact-loc">المقر: الجزائر العاصمة • المكتب الجهوي للوسط</span>
+        <div class="contact-pill-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+        <div class="contact-pill-text">
+          <span class="contact-label" id="txt-contact-loc-title">المقر الرسمي</span>
+          <span class="contact-value" id="txt-contact-loc" style="font-size: 0.82rem;">الجزائر العاصمة • المكتب الجهوي للوسط</span>
+        </div>
       </div>
     </section>
 
@@ -1074,7 +1224,7 @@
     <footer class="portal-footer anim-reveal">
       <div class="footer-org" id="txt-foot-org">الجمهورية الجزائرية الديمقراطية الشعبية</div>
       <div class="footer-sub" id="txt-foot-sub">المنظمة الجزائرية إتصال من أجل التنمية • الهيئة الوطنية لتنمية المهاجرين</div>
-      <div class="footer-copy" id="txt-foot-copy">© 2026 AHMED CHENNOUFI • <a href="https://www.digitalagencey.com/" target="_blank" rel="noopener noreferrer" class="footer-agency-link" title="Digital Agency">Official Institutional Bio Portal by Digital Agency</a></div>
+      <div class="footer-copy" id="txt-foot-copy">© 2026 Thania HAMCHAOUI • <a href="https://www.digitalagencey.com/" target="_blank" rel="noopener noreferrer" class="footer-agency-link" title="Digital Agency">Official Institutional Bio Portal by Digital Agency</a></div>
     </footer>
 
   </main>
@@ -1176,8 +1326,8 @@
       const activeLang = document.documentElement.lang || 'ar';
       const t = translations[activeLang] || translations.ar;
       const shareData = {
-        title: t.shareTitle || 'أحمد شنوفي | AHMED CHENNOUFI',
-        text: t.shareText || 'الملف التعريفي الرسمي لـ أحمد شنوفي - أمين المال بالمكتب الجهوي للوسط (الجزائر والولايات المجاورة لها)',
+        title: t.shareTitle || 'تانية حمشاوي | Thania HAMCHAOUI',
+        text: t.shareText || 'الملف التعريفي الرسمي لـ تانية حمشاوي - عضو بالمكتب الجهوي (الوسط الجزائر العاصمة)',
         url: window.location.href
       };
       if (navigator.share) {
@@ -1211,13 +1361,16 @@
       const vcardData = [
         'BEGIN:VCARD',
         'VERSION:3.0',
-        'N:HAMCHAOUI;THANIA;;;',
-        'FN:THANIA HAMCHAOUI (ثانية حمشاوي)',
+        'N:HAMCHAOUI;Thania;;;',
+        'FN:Thania HAMCHAOUI (تانية حمشاوي)',
         'ORG:المنظمة الجزائرية إتصال من أجل التنمية - الهيئة الوطنية لتنمية المهاجرين والتكفل بالجالية بالخارج',
         'TITLE:عضو بالمكتب الجهوي (الوسط الجزائر العاصمة)',
-        'TEL;TYPE=CELL,VOICE:+213000000000',
-        'EMAIL;TYPE=WORK:contact@hamchaoui-thania.dz',
-        'NOTE:الرقم التعريفي: 100123 | رقم التسجيل: 2026103601231019 | بطاقة عضوية معتمدة رقم 017',
+        'TEL;TYPE=CELL,VOICE,pref:+213773125907',
+        'TEL;TYPE=WORK,VOICE:+213773125907',
+        'TEL;TYPE=HOME,VOICE:+213553225486',
+        'EMAIL;TYPE=INTERNET,pref:flowers_tanya@yahoo.fr',
+        'X-SOCIALPROFILE;type=whatsapp:https://wa.me/213773125907',
+        'NOTE:الاسم: تانية حمشاوي | Thania HAMCHAOUI | الرقم التعريفي: 100123 | رقم التسجيل: 2026103601231019 | بطاقة عضوية معتمدة رقم 017',
         'END:VCARD'
       ].join('\r\n');
 
@@ -1244,13 +1397,14 @@
         orgSub: 'الهيئة الوطنية لتنمية المهاجرين والتكفل بالجالية بالخارج',
         pillarsPill: '<span>إتصال</span> • <span>ترقية الإستثمار</span> • <span>تنمية</span>',
         badgeStatus: 'بطاقة عضوية معتمدة',
-        personNameAr: 'ثانية حمشاوي',
-        personNameEn: 'THANIA HAMCHAOUI',
+        personNameAr: 'تانية حمشاوي',
+        personNameEn: 'Thania HAMCHAOUI',
         personTitle: 'عضو بالمكتب الجهوي • الوسط الجزائر العاصمة',
         bannerTitle: 'حامل هذه البطاقة شخصية إعتبارية',
         bannerSub: 'له كامل الصلاحيات أمام الجهات الرسمية والأمنية',
         btnSaveContact: 'حفظ بطاقة الاتصال الرسمية (vCard)',
-        btnTopCall: 'الاتصال المباشر بالمكتب الجهوي',
+        btnTopCall: 'الاتصال المباشر • 0773 12 59 07',
+        btnTopWa: 'محادثة واتساب • WhatsApp',
         btnShareProfile: 'مشاركة الرابط الرسمي',
         credTitle: 'بيانات العضوية والاعتماد الرسمي',
         lblIdNum: 'الرقم التعريفي (Matricule)',
@@ -1258,13 +1412,16 @@
         lblRegNum: 'رقم التسجيل (Enregistrement)',
         valRegNum: '2026103601231019',
         lblFullName: 'الاسم واللقب (Nom & Prénom)',
-        valFullName: 'ثانية حمشاوي • THANIA HAMCHAOUI',
+        valFullName: 'تانية حمشاوي • Thania HAMCHAOUI',
         lblBirth: 'تاريخ ومكان الازدياد',
         valBirth: '1968/01/21 • الجزائر العاصمة (ولاية الجزائر)',
         lblCardType: 'نوع وصفة البطاقة',
         valCardType: 'بطاقة عضوية معتمدة',
         lblRole: 'الوظيفة والصفة الرسمية',
         valRole: 'عضو بالمكتب الجهوي (الوسط الجزائر العاصمة)',
+        lblPhoneMain: 'الهاتف المهني / واتساب',
+        lblPhoneSec: 'الهاتف الثانوي',
+        lblCredEmail: 'البريد الإلكتروني المباشر',
         lblDecree: 'اعتماد وزارة الداخلية والجماعات المحلية والتهيئة العمرانية',
         lblIssue: 'تاريخ الإصدار والصلاحية',
         valIssue: 'أكتوبر 2026 (صالحة لمدة سنة قابلة للتجديد)',
@@ -1277,17 +1434,20 @@
         p2Desc: 'استقبال وتوجيه أفراد الجالية الوطنية بالخارج ومرافقتهم في تسوية انشغالاتهم الإدارية والتنموية والاجتماعية.',
         p3Title: 'تنمية المبادرات وترقية الاستثمار بالعاصمة والوسط',
         p3Desc: 'المساهمة في تجسيد مشاريع التنمية المحلية واستقطاب المبادرات الاقتصادية لأبناء الجالية بالجزائر العاصمة والوسط.',
-        contactPhone: 'الاتصال المباشر بالمكتب الجهوي',
-        contactMail: 'المراسلة الرسمية عبر البريد الإلكتروني',
-        contactLoc: 'المقر: الجزائر العاصمة • المكتب الجهوي للوسط',
+        lblContactPhonePro: 'الهاتف المهني والرئيسي',
+        lblContactWa: 'المراسلة عبر واتساب (WhatsApp)',
+        lblContactPhoneSec: 'الهاتف الثانوي',
+        lblContactMail: 'البريد الإلكتروني المباشر',
+        txtContactLocTitle: 'المقر الرسمي',
+        contactLoc: 'الجزائر العاصمة • المكتب الجهوي للوسط',
         legalHeading: 'هذه البطاقة شخصية • توجيهات وضوابط رسمية',
         dir1: 'يجب تقديم هذه البطاقة لزوماً لدى المصالح الأمنية والإدارية عند القيام بمهمة.',
         dir2: 'يجب إبلاغ القيادة العامة عند سرقة أو ضياع البطاقة فوراً.',
         dir3: 'يعرض الإستعمال غير القانوني لهذه البطاقة لعقوبات جزائية وإدارية.',
         dir4: 'حامل هذه البطاقة شخصية إعتبارية له كامل الصلاحيات أمام الجهات الرسمية.',
         unCitation: 'إعلان الحق في التنمية ونُشر بموجب قرار الجمعية العامة للأمم المتحدة<br>تحت رقم <strong>128/14</strong> المؤرخ بـ <strong>04 كانون الأول / ديسمبر 1986</strong>',
-        shareTitle: 'ثانية حمشاوي | THANIA HAMCHAOUI',
-        shareText: 'الملف التعريفي الرسمي لـ ثانية حمشاوي - عضو بالمكتب الجهوي (الوسط الجزائر العاصمة)'
+        shareTitle: 'تانية حمشاوي | Thania HAMCHAOUI',
+        shareText: 'الملف التعريفي الرسمي لـ تانية حمشاوي - عضو بالمكتب الجهوي (الوسط الجزائر العاصمة)'
       },
       fr: {
         dir: 'ltr',
@@ -1298,13 +1458,14 @@
         orgSub: 'Autorité Nationale pour le Développement des Migrants et Prise en Charge de la Communauté à l’Étranger',
         pillarsPill: '<span>Communication</span> • <span>Promotion de l’Investissement</span> • <span>Développement</span>',
         badgeStatus: 'Carte de Membre Agréée',
-        personNameAr: 'ثانية حمشاوي',
-        personNameEn: 'THANIA HAMCHAOUI',
+        personNameAr: 'تانية حمشاوي',
+        personNameEn: 'Thania HAMCHAOUI',
         personTitle: 'Membre du Bureau Régional • Centre Alger',
         bannerTitle: 'Le titulaire de cette carte est une personne morale',
         bannerSub: 'Ayant pleins pouvoirs devant les autorités officielles et sécuritaires',
         btnSaveContact: 'Enregistrer le Contact Officiel (vCard)',
-        btnTopCall: 'Appeler le Bureau Régional',
+        btnTopCall: 'Appel Direct • 0773 12 59 07',
+        btnTopWa: 'WhatsApp Direct',
         btnShareProfile: 'Partager le Profil Officiel',
         credTitle: 'Fiche d’Identification & Agrément Officiel',
         lblIdNum: 'N° d’Identification (Matricule)',
@@ -1312,13 +1473,16 @@
         lblRegNum: 'N° d’Enregistrement',
         valRegNum: '2026103601231019',
         lblFullName: 'Nom et Prénom',
-        valFullName: 'THANIA HAMCHAOUI • ثانية حمشاوي',
+        valFullName: 'Thania HAMCHAOUI • تانية حمشاوي',
         lblBirth: 'Date et lieu de naissance',
         valBirth: '21/01/1968 • Alger',
         lblCardType: 'Type de Carte Officielle',
         valCardType: 'Carte de Membre',
         lblRole: 'Fonction officielle',
         valRole: 'Membre du Bureau Régional (Centre Alger)',
+        lblPhoneMain: 'Tél. Professionnel / WhatsApp',
+        lblPhoneSec: 'Tél. Secondaire',
+        lblCredEmail: 'E-mail Direct',
         lblDecree: 'Agrément du Ministère de l’Intérieur et des Collectivités Locales',
         lblIssue: 'Date d’émission & Validité',
         valIssue: 'Octobre 2026 (Valable un an renouvelable)',
@@ -1331,16 +1495,19 @@
         p2Desc: 'Accueil, écoute et accompagnement des membres de la communauté nationale à l’étranger dans leurs démarches administratives.',
         p3Title: 'Promotion des Initiatives & Investissement Régional',
         p3Desc: 'Contribution à la concrétisation des projets de développement local et valorisation des initiatives économiques de la diaspora.',
-        contactPhone: 'Appeler le Bureau Régional',
-        contactMail: 'Correspondance Officielle par E-mail',
-        contactLoc: 'Siège: Alger • Bureau Régional du Centre (Alger & Environs)',
+        lblContactPhonePro: 'Téléphone Professionnel / Principal',
+        lblContactWa: 'Messagerie WhatsApp',
+        lblContactPhoneSec: 'Téléphone Secondaire',
+        lblContactMail: 'Adresse E-mail Directe',
+        txtContactLocTitle: 'Siège Régional',
+        contactLoc: 'Alger • Bureau Régional du Centre (Alger & Environs)',
         legalHeading: 'Carte Personnelle • Directives & Obligations',
         dir1: 'Présentation obligatoire de cette carte auprès des services de sécurité et administratifs lors des missions.',
         dir2: 'Signalement immédiat obligatoire au Commandement Général en cas de vol ou de perte de la carte.',
         dir3: 'Toute utilisation frauduleuse ou illégale de cette carte expose son auteur à des sanctions pénales et administratives.',
         dir4: 'Le titulaire de cette carte est une personne morale dotée de pleins pouvoirs devant les autorités officielles.',
         unCitation: 'Déclaration sur le droit au développement adoptée par l’Assemblée Générale de l’ONU<br>Résolution <strong>128/14</strong> du <strong>04 décembre 1986</strong>',
-        shareTitle: 'THANIA HAMCHAOUI | ثانية حمشاوي',
+        shareTitle: 'Thania HAMCHAOUI | تانية حمشاوي',
         shareText: 'Portail officiel de Thania Hamchaoui - Membre du Bureau Régional (Centre Alger)'
       },
       en: {
@@ -1352,13 +1519,14 @@
         orgSub: 'National Authority for the Development of Migrants and Sponsorship of the Community Abroad',
         pillarsPill: '<span>Communication</span> • <span>Investment Promotion</span> • <span>Development</span>',
         badgeStatus: 'Accredited Membership Card',
-        personNameAr: 'ثانية حمشاوي',
-        personNameEn: 'THANIA HAMCHAOUI',
+        personNameAr: 'تانية حمشاوي',
+        personNameEn: 'Thania HAMCHAOUI',
         personTitle: 'Member of the Regional Office • Central Algiers',
         bannerTitle: 'The holder of this card is a legal persona',
         bannerSub: 'Vested with full executive powers before official and security authorities',
         btnSaveContact: 'Save Official Contact (vCard)',
-        btnTopCall: 'Call Regional Office',
+        btnTopCall: 'Direct Call • +213 773 12 59 07',
+        btnTopWa: 'WhatsApp Direct',
         btnShareProfile: 'Share Official Profile',
         credTitle: 'Official Credential Data Sheet',
         lblIdNum: 'Identification Number (ID)',
@@ -1366,13 +1534,16 @@
         lblRegNum: 'Registration Number',
         valRegNum: '2026103601231019',
         lblFullName: 'Full Name',
-        valFullName: 'THANIA HAMCHAOUI • ثانية حمشاوي',
+        valFullName: 'Thania HAMCHAOUI • تانية حمشاوي',
         lblBirth: 'Date & Place of Birth',
         valBirth: 'Jan 21, 1968 • Algiers',
         lblCardType: 'Official Card Designation',
         valCardType: 'Membership Card (بطاقة عضوية)',
         lblRole: 'Official Position',
         valRole: 'Member of the Regional Office (Central Algiers)',
+        lblPhoneMain: 'Professional Phone / WhatsApp',
+        lblPhoneSec: 'Secondary Phone',
+        lblCredEmail: 'Direct E-mail',
         lblDecree: 'Ministry of Interior & Local Authorities Accreditation',
         lblIssue: 'Issue Date & Validity',
         valIssue: 'October 2026 (Valid for one renewable year)',
@@ -1385,8 +1556,11 @@
         p2Desc: 'Assisting and guiding national diaspora members through administrative, social, and development channels.',
         p3Title: 'Regional Initiatives & Investment Promotion',
         p3Desc: 'Fostering local development projects and empowering diaspora economic initiatives in Algiers and the central region.',
-        contactPhone: 'Direct Regional Office Call',
-        contactMail: 'Official Email Correspondence',
+        lblContactPhonePro: 'Professional & Primary Phone',
+        lblContactWa: 'WhatsApp Messaging',
+        lblContactPhoneSec: 'Secondary Phone',
+        lblContactMail: 'Direct E-mail Correspondence',
+        txtContactLocTitle: 'Central Regional Headquarters',
         contactLoc: 'Headquarters: Algiers • Central Regional Office (Algiers & Environs)',
         legalHeading: 'Personal Card • Directives and Regulations',
         dir1: 'Mandatory presentation of this card to security and administrative authorities during official missions.',
@@ -1394,7 +1568,7 @@
         dir3: 'Illegal or unauthorized use of this card subjects the offender to penal and administrative sanctions.',
         dir4: 'The holder of this card is a legal persona vested with full powers before official entities.',
         unCitation: 'UN General Assembly Declaration on the Right to Development<br>Resolution <strong>128/14</strong> of <strong>December 4, 1986</strong>',
-        shareTitle: 'THANIA HAMCHAOUI | Official Profile',
+        shareTitle: 'Thania HAMCHAOUI | Official Profile',
         shareText: 'Official Bio Portal of Thania Hamchaoui - Member of the Regional Office (Central Algiers)'
       }
     };
@@ -1428,6 +1602,7 @@
       
       setTxt('btn-save-contact', data.btnSaveContact);
       setTxt('btn-top-call-txt', data.btnTopCall);
+      setTxt('btn-top-wa-txt', data.btnTopWa);
       setTxt('btn-share-profile', data.btnShareProfile);
 
       setTxt('txt-cred-title', data.credTitle);
@@ -1443,6 +1618,9 @@
       setTxt('val-card-type', data.valCardType);
       setTxt('lbl-role', data.lblRole);
       setTxt('val-role', data.valRole);
+      setTxt('lbl-phone-main', data.lblPhoneMain);
+      setTxt('lbl-phone-sec', data.lblPhoneSec);
+      setTxt('lbl-cred-email', data.lblCredEmail);
       setTxt('lbl-decree', data.lblDecree);
       setTxt('lbl-issue', data.lblIssue);
       setTxt('val-issue', data.valIssue);
@@ -1457,8 +1635,11 @@
       setTxt('txt-p3-title', data.p3Title);
       setTxt('txt-p3-desc', data.p3Desc);
 
-      setTxt('txt-contact-phone', data.contactPhone);
-      setTxt('txt-contact-mail', data.contactMail);
+      setTxt('lbl-contact-phone-pro', data.lblContactPhonePro);
+      setTxt('lbl-contact-wa', data.lblContactWa);
+      setTxt('lbl-contact-phone-sec', data.lblContactPhoneSec);
+      setTxt('lbl-contact-mail', data.lblContactMail);
+      setTxt('txt-contact-loc-title', data.txtContactLocTitle);
       setTxt('txt-contact-loc', data.contactLoc);
 
       setTxt('txt-legal-heading', data.legalHeading);
